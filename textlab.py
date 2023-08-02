@@ -6,17 +6,17 @@ def analyzer(text):
     polaridad = blob.sentiment.polarity
 
     if polaridad > 0:
-        tag = "Positivo"
+        tag = f"{G}Positivo - Positive"
     elif polaridad < 0:
-        tag = "Negativo"
+        tag = f"{R}Negativo - Negative"
     else:
-        tag = "Neutral"
+        tag = f"{W}Neutral"
 
     return tag
 
 
 def main():
-    text = input("Texto: ")
+    text = input("Text(EN/ES): ")
     result = analyzer(text)
 
 print(f"{G} FEEL {O}{result}")
